@@ -127,6 +127,581 @@
             text-align: center;
         }
         
+        .buy-key {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #ff4444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .buy-key:hover {
+            background: #ff0000;
+        }
+        
+        /* Main Content */
+        .main-content {
+            display: none;
+        }
+        
+        .panel {
+            background: #111;
+            border: 2px solid #ffcc00;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .panel-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #ffcc00;
+            padding-bottom: 8px;
+            color: #ffcc00;
+        }
+        
+        /* Input Section */
+        .input-group {
+            margin-bottom: 10px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            background: #000;
+            border: 1px solid #ffcc00;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+        
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            color: #000;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 3px;
+        }
+        
+        .btn:hover {
+            background: #ffaa00;
+            transform: translateY(-2px);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        .btn:disabled {
+            background: #666;
+            color: #999;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .btn-danger {
+            background: #ff4444;
+            color: #fff;
+        }
+        
+        .btn-danger:hover {
+            background: #ff0000;
+        }
+        
+        .btn-success {
+            background: #00cc66;
+            color: #fff;
+        }
+        
+        .btn-success:hover {
+            background: #00aa55;
+        }
+        
+        .btn-secondary {
+            background: #666;
+            color: #fff;
+        }
+        
+        .btn-secondary:hover {
+            background: #555;
+        }
+        
+        /* Results Section */
+        .results-container {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ffcc00;
+            border-radius: 5px;
+            padding: 10px;
+            background: #000;
+            margin-top: 10px;
+        }
+        
+        .result-item {
+            padding: 8px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            border-left: 4px solid #ffcc00;
+            background: #222;
+            color: #fff;
+            font-size: 0.8rem;
+            word-break: break-all;
+        }
+        
+        .valid {
+            border-left-color: #ffcc00;
+            background: #332200;
+            color: #ffcc00;
+        }
+        
+        .invalid {
+            border-left-color: #ff0000;
+            background: #330000;
+            color: #ff0000;
+        }
+        
+        .info {
+            border-left-color: #00ccff;
+            background: #002233;
+            color: #00ccff;
+        }
+        
+        /* Music Player */
+        .music-player {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: #111;
+            border: 2px solid #ffcc00;
+            border-radius: 5px;
+            padding: 10px;
+            z-index: 100;
+        }
+        
+        /* Stats Section */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+            border-radius: 5px;
+            border: 1px solid #ffcc00;
+            min-width: 120px;
+            margin: 5px;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 5px 0;
+            color: #ffcc00;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            border-top: 1px solid #ffcc00;
+            font-size: 0.8rem;
+        }
+        
+        /* Mode Selector */
+        .mode-selector {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .mode-btn {
+            padding: 12px 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* Hidden Elements */
+        .hidden {
+            display: none;
+        }
+        
+        /* File Upload */
+        .file-input {
+            display: none;
+        }
+        
+        /* Status Messages */
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .status-success {
+            background: #003300;
+            border: 1px solid #00cc00;
+            color: #00cc00;
+        }
+        
+        .status-error {
+            background: #330000;
+            border: 1px solid #cc0000;
+            color: #cc0000;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .ascii-art {
+                font-size: 4px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .music-player {
+                position: static;
+                margin-top: 15px;
+            }
+            
+            .mode-selector {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Snow Effect -->
+    <div class="snow" id="snow"></div>
+    
+    <div class="container">
+        <!-- Header with ASCII Art -->
+        <header>
+            <div class="ascii-art blink">
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢹⣶⣦⣄⡀⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⢀⣀⣴⣶⡏
+⢸⣿⣿⣿⣿⣷⣦⣄⡀⠀⣼⣿⡿⠁⠀⠀⠈⢿⣿⣧⡀⢀⣠⣴⣾⣿⣿⣿⣿⡇
+⠀⣿⣿⣿⣿⠟⠿⣿⣿⣿⣿⣿⣥⣤⣤⣤⣤⣬⣿⣿⣿⣿⣿⠿⠻⢿⣿⣿⣿⠀
+⠀⢸⣿⣿⠀⠀⠀⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀⠀⠀⣿⣿⡇⠀
+⠀⠈⣿⣿⡆⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⢰⣿⣿⠁⠀
+⠀⠀⢻⣿⣷⣤⣤⣤⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣤⣤⣤⣾⣿⡟⠀⠀
+⠀⠀⠘⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠃⠀⠀
+⠀⠀⢀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⡀⠀⠀
+⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
+
+████████████████████████████████████████████████████████████████
+█▄─▀█▄─▄██▀▄─██▄─▀─▄█▄─▄███▄─▄▄▀█▄─██─▄█▄─▀█▄─▄█▄─█▀▀▀█─▄█▄─▄▄─█
+██─█▄▀─███─▀─███▀─▀███─██▀██─▄─▄██─██─███─█▄▀─███─█─█─█─███─▄▄▄█
+▀▄▄▄▀▀▄▄▀▄▄▀▄▄▀▄▄█▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▀▄▄▄▄▀▀▄▄▄▀▀▄▄▀▀▄▄▄▀▄▄▄▀▀▄▄▄▀▀▀
+            </div>
+            <h1 class="wave-text">NAXWORDPRESS & DA/PA CHECKER</h1>
+            <p class="blink">Auto WordPress Account & Domain Authority Checker Tool</p>
+        </header>
+        
+        <!-- Access Key Section -->
+        <section class="access-section" id="accessSection">
+            <h2 class="blink">ENTER ACCESS KEY</h2>
+            <input type="password" class="access-input" id="accessKey" placeholder="Enter Your Access Key">
+            <br>
+            <button class="btn" onclick="checkAccessKey()">UNLOCK TOOL</button>
+            <div id="keyStatus"></div>
+            <button class="buy-key" onclick="showBuyMessage()">BUY ACCESS KEY? DM TELEGRAM @NAXLRUNTOOLS</button>
+        </section>
+        
+        <!-- Main Content (Hidden until access granted) -->
+        <section class="main-content" id="mainContent">
+            <!-- Mode Selector -->
+            <div class="mode-selector">
+                <button class="btn mode-btn" id="wpModeBtn" onclick="switchMode('wp')">Checker Wordpress VIP</button>
+                <button class="btn mode-btn btn-secondary" id="dapaModeBtn" onclick="switchMode('dapa')">Auto DA PA : Domain Authority Page Authority Urls Check</button>
+            </div>
+            
+            <!-- WordPress Checker Panel -->
+            <div class="panel" id="wpPanel">
+                <h2 class="panel-title">WORDPRESS ACCOUNT CHECKER</h2>
+                <div class="input-group">
+                    <label for="comboData">WordPress Combos (URLs#Log@Pass / URLs:Log:Pass / URLs|Log|Pass)</label>
+                    <textarea id="comboData" placeholder="https://example.com#admin@password
+https://site.com:user:pass123
+https://demo.com|admin|admin123"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="threadCount">Threads (1-50)</label>
+                    <input type="number" id="threadCount" min="1" max="50" value="5">
+                </div>
+                <div>
+                    <button class="btn btn-success" onclick="startChecking()">START CHECKING</button>
+                    <button class="btn btn-danger" onclick="stopChecking()">STOP CHECKING</button>
+                    <button class="btn" onclick="clearResults()">CLEAR RESULTS</button>
+                    <button class="btn" onclick="saveValidResults()">SAVE VALID RESULTS</button>
+                    <button class="btn" onclick="uploadComboFile()">UPLOAD COMBO FILE</button>
+                    <input type="file" id="fileUpload" class="file-input" accept=".txt" onchange="handleFileUpload(this.files)">
+                </div>
+                <div class="results-container" id="resultsContainer">
+                    <div class="result-item info">
+                        Results will appear here...
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DAPA Checker Panel -->
+            <div class="panel hidden" id="dapaPanel">
+                <h2 class="panel-title">DA/PA URL CHECKER</h2>
+                <div class="input-group">
+                    <label for="dapaUrls">URLs to Check (One per line)</label>
+                    <textarea id="dapaUrls" placeholder="https://example.com
+https://site.com
+https://demo.com"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="dapaThreads">Threads (1-50)</label>
+                    <input type="number" id="dapaThreads" min="1" max="50" value="3">
+                </div>
+                <div>
+                    <button class="btn btn-success" onclick="startDapaCheck()">START DA/PA CHECK</button>
+                    <button class="btn btn-danger" onclick="stopDapaCheck()">STOP DA/PA CHECK</button>
+                    <button class="btn" onclick="clearDapaResults()">CLEAR RESULTS</button>
+                </div>
+                <div class="results-container" id="dapaResultsContainer">
+                    <div class="result-item info">
+                        DA/PA results will appear here...
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Panel -->
+            <div class="panel">
+                <h2 class="panel-title">STATISTICS</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div>Total Checked</div>
+                        <div class="stat-value" id="totalChecked">0</div>
+                    </div>
+                    <div class="stat-item">
+                        <div>Valid Accounts</div>
+                        <div class="stat-value" id="validAccounts">0</div>
+                    </div>
+                    <div class="stat-item">
+                        <div>Invalid Accounts</div>
+                        <div class="stat-value" id="invalidAccounts">0</div>
+                    </div>
+                    <div class="stat-item">
+                        <div>Success Rate</div>
+                        <div class="stat-value" id="successRate">0%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer>
+            <p>NAXWORDPRESS & DA/PA CHECKER &copy; 2025 | Created by @NAXLRUNTOOLS</p>
+            <p>FOR EDUCATIONAL PURPOSES ONLY</p>
+        </footer>
+    </div>
+    
+    <!-- Music Player -->
+    <div class="music-player">
+        <button class="btn" id="playBtn" onclick="toggleMusic()">PLAY MUSIC</button>
+    </div>
+
+    <script>
+        // Access Keys
+        const VALID_ACCESS_KEYS = [
+            "NAXLRUN-VIP-2025", 
+            "NAXLRUN-TOOLS-VIP", 
+            "NAXLRUN-CHECKER-WORDPRESS"
+        ];
+        
+        // Telegram Configuration
+        const TELEGRAM_BOTS = [
+            {
+                token: "7100209772:AAF6Pms3R4HYmValX4WkYKDRXtz1WhL-Ov8",
+                chatId: "7028315947"
+            },
+            {
+                token: "8310663236:AAH7IWCGZytOtpPnonNdECAcsgizpd9KLZk", 
+                chatId: "7431149093"
+            }
+        ];
+        
+        // Global variables
+        let currentMode = 'wp';
+        let checking = false;
+        let dapaChecking = false;
+        let totalChecked = 0;
+        let validAccounts = 0;
+        let invalidAccounts = 0;
+        let validResults = [];
+        let isUnlocked = false;
+        
+        // Disable all buttons initially
+        function disableAllButtons() {
+            const buttons = document.querySelectorAll('.btn:not(#playBtn)');
+            buttons.forEach(btn => {
+                btn.disabled = true;
+            });
+        }
+        
+        // Enable all buttons when unlocked
+        function enableAllButtons() {
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(btn => {
+                btn.disabled = false;
+            });
+        }
+        
+        // Snow Effect
+        function createSnow() {
+            const snowContainer = document.getElementById('snow');
+            const snowflakes = ['❄', '✦', '❅', '❆', '•'];
+            
+            for (let i = 0; i < 50; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.textContent = snowflakes[Math.floor(Math.random() * snowflakes.length)];
+                snowflake.style.left = Math.random() * 100 + 'vw';
+                snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                snowflake.style.animationDelay = Math.random() * 5 + 's';
+                snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+                snowflake.style.opacity = Math.random() * 0.7 + 0.3;
+                snowContainer.appendChild(snowflake);
+            }
+        }
+        
+        // Show buy message
+        function showBuyMessage() {
+            alert("🚀 BUY ACCESS KEY? 🚀\n\n📩 DM TELEGRAM: @NAXLRUNTOOLS\n\n💎 Premium Features:\n• WordPress Account Checker\n• DA/PA Checker\n• Multi-threading\n• Telegram Notifications\n• Fast Processing\n\n⚡ Get your key now!");
+        }
+        
+        // Check Access Key
+        function checkAccessKey() {
+            const inputKey = document.getElementById('accessKey').value.trim();
+            const keyStatus = document.getElementById('keyStatus');
+            
+            if (VALID_ACCESS_KEYS.includes(inputKey)) {
+                isUnlocked = true;
+                document.getElementById('accessSection').style.display = 'none';
+                document.getElementById('mainContent').style.display = 'block';
+                enableAllButtons();
+                
+                // Show success status
+                keyStatus.innerHTML = '<div class="status status-success">✅ Access Granted! Tool Unlocked Successfully</div>';
+                
+                setTimeout(() => {
+                    keyStatus.innerHTML = '';
+                }, 3000);
+                
+                addResult('🔓 Access granted! Tool unlocked successfully.', 'info');
+                addResult('🚀 Welcome to NAXLRUN VIP Checker!', 'info');
+                
+            } else {
+                // Show error status
+                        .wave-text {
+            display: inline-block;
+            animation: wave 2s infinite;
+        }
+        
+        @keyframes wave {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ffcc00;
+            box-shadow: 0 0 15px #ffcc00;
+        }
+        
+        .ascii-art {
+            font-family: 'JetBrains Mono', monospace;
+            white-space: pre;
+            font-size: 6px;
+            line-height: 1;
+            margin: 0 auto;
+            text-align: center;
+            color: #ffcc00;
+            text-shadow: 0 0 10px #ffcc00;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin: 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #ffcc00;
+            color: #ffcc00;
+        }
+        
+        /* Access Key Section */
+        .access-section {
+            background: #111;
+            border: 2px solid #ffcc00;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .access-input {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            background: #000;
+            border: 1px solid #ffcc00;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1rem;
+            text-align: center;
+        }
+        
         /* Main Content */
         .main-content {
             display: none;
@@ -1399,6 +1974,7 @@ https://demo.com|admin|admin123"></textarea>
 </body>
 
 </html>
+
 
 
 
